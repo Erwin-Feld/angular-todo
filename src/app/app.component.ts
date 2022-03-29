@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TodoItem } from './interfaces/todo-item.interface';
+import { todoList } from './mock.data/mock-todo.data';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fix-todo';
+
+  todoList:TodoItem[] = todoList;
+  
+  addItem(value: string) {    
+    this.todoList.push({ title: value });
+  }
 }

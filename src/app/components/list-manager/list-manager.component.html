@@ -1,0 +1,9 @@
+
+<app-add-todo (submit)="addItem($event)"></app-add-todo>
+
+<ul>
+    <li *ngFor="let todoItem of todoList">
+        <app-todo-item [item]="todoItem.title"></app-todo-item>
+    </li>
+</ul>
+
